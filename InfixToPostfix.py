@@ -1,3 +1,7 @@
+/**
+* Author: Hemant Tripathi
+*/
+
 class InfixToPostfix:
     def __init__(self):
         self.opstack = []
