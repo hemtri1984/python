@@ -1,6 +1,6 @@
-/**
-* Author: Hemant Tripathi
-*/
+############################
+# Author: Hemant Tripathi  #
+###########################
 
 class InfixToPostfix:
     def __init__(self):
