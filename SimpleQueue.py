@@ -2,7 +2,6 @@
 # Author: Hemant Tripathi #
 ###########################
 
-global MAXQUEUESIZE
 class Queue:
     def __init__(self):
         self.MAXQUEUESIZE = 10
