@@ -5,7 +5,7 @@
 global MAXQUEUESIZE
 class Queue:
     def __init__(self):
-        self.MAXQUEUESIZE = 10;
+        self.MAXQUEUESIZE = 10
         self.myQueue = []
         self.rear = -1
         self.front = 0
