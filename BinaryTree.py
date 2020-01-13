@@ -38,7 +38,8 @@ def main():
         print('2. Show all Nodes of tree into Inorder form')
         print('3. Show all Nodes of tree into Preorder form')
         print('4. Show all Nodes of tree into Postorder form')
-        print('5. Exit')
+        print('5. Search and element in BST')
+        print('6. Exit')
 
         selection = int(input())
         if selection == 1:
@@ -67,6 +68,14 @@ def main():
         elif selection == 4:
             print('Traversing the tree into Postorder form')
             showPostOrder(binaryTree.root)
+
+        elif selection == 5:
+            element = int(input('Enter the element you want to search in BST: '))
+            searchNode = searchBST(binaryTree.root, element)
+            if searchNode == None:
+                print('Element not found!')
+            else:
+                print('Element found!')
 
         else:
             print('########### Terminating the program  ##############')
@@ -106,6 +115,17 @@ def showPostOrder(parentNode):
     if(parentNode.isRight()):
         showPostOrder(parentNode.right)
     parentNode.printInfo()
+
+def searchBST(parentNode, data):
+    if parentNode == None:
+        return parentNode
+    else:
+        while parentNode != None and data != parentNode.info:
+            if data < parentNode.info:
+                parentNode = parentNode.left
+            else:
+                parentNode = parentNode.right
+        return parentNode
 
 if __name__ == "__main__":
     main()
